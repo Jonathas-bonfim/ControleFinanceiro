@@ -8,6 +8,10 @@
   box-sizing: border-box;
 }
 
+html{
+  font-size: 93.75%;
+}
+
 body{
   background: #f0f2f5;
   font-family: 'Poppins', sans-serif;
@@ -103,6 +107,17 @@ a:hover{
   margin-bottom: .8rem;
 }
 
+#transaction{
+  display: block;
+  width: 100%;
+  
+  /* Não vai chegar para o lado */
+  /* overflow: hidden; */ 
+  
+  /* Vai chegar para o lado quando necessário */
+  overflow-x: auto;
+}
+
 #data-table{
   width: 100%;
   border-spacing: 0 0.5rem;
@@ -158,5 +173,19 @@ footer{
   padding: 4rem 0 2rem;
   color: var(--dark-blue);
   opacity: 0.6;
+}
+
+
+/* Responsive */
+@media (min-width: 800px) {
+  html{
+    font-size: 87.5%;
+  }
+
+  #balance{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+  }
 }
 
